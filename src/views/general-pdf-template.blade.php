@@ -157,7 +157,7 @@
 				    			if ($isOnSameGroup === false) {
 		    						echo '<tr class="bg-black f-white">';
 		                            if ($showNumColumn || $grandTotalSkip > 1) {
-		                                echo '<td colspan="' . $grandTotalSkip . '"><b>'.__('laravel-report-generator::messages.grand_total')." ". $extraInfo?$extraInfo:"".'</b></td>';
+		                                echo '<td colspan="' . $grandTotalSkip . '"><b>'.__('laravel-report-generator::messages.grand_total'). ": ". $extraInfo .'</b></td>';
 		                            }
 									$dataFound = false;
 	    							foreach ($columns as $colName => $colData) {
@@ -226,7 +226,7 @@
 					@if ($showTotalColumns != [] && $ctr > 1)
 						<tr class="bg-black f-white">
                             @if ($showNumColumn || $grandTotalSkip > 1)
-		                        <td colspan="{{ $grandTotalSkip }}"><b>{{ __('laravel-report-generator::messages.grand_total') ." ". $extraInfo?$extraInfo:""}}</b></td>
+		                        <td colspan="{{ $grandTotalSkip }}"><b>{{ __('laravel-report-generator::messages.grand_total') ." ". $extraInfo}}</b></td>
                             @endif
 							<?php $dataFound = false; ?>
 							@foreach ($columns as $colName => $colData)
